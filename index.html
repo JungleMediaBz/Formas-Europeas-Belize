@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas Europeas Belize</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide img:first-child {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 175px !important;
+            height: auto;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1px;
+            border-radius: 1px;
+            object-fit: contain;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .title {
+            background-color: #696969;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #5c5c5c;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/image1.jpg" alt="Slide 1">
+                    <img src="images/logo.png" alt="Formas Europeas Logo" class="logo-overlay">
+                </div>
+                <div class="slide">
+                    <img src="images/image2.jpg" alt="Slide 2">
+                    <img src="images/logo.png" alt="Formas Europeas Logo" class="logo-overlay">
+                </div>
+                <div class="slide">
+                    <img src="images/image3.jpg" alt="Slide 3">
+                    <img src="images/logo.png" alt="Formas Europeas Logo" class="logo-overlay">
+                </div>
+            </div>
+        </div>
+
+        <div class="title">
+            Discover Formas Europeas Belize
+        </div>
+
+        <div class="content">
+            <p class="description">
+                Elevate your architectural projects with premium windows, doors, and glass solutions! As the exclusive distributor of Formas Europeas products in Belize, we bring you European designs crafted in Guatemala and tailored to meet Belize's unique climate and aesthetic needs. Whether you're constructing a luxury home, a commercial property, or undertaking a renovation, our high-quality windows and doors deliver unmatched style, functionality, and durability. Visit our showroom in Placencia, Belize, or click the link below to explore our website and discover how we can transform your spaces!
+            </p>
+            <a href="https://formaseuropeasbelize.com/" class="cta-button" target="_blank">Visit Our Website</a>
+        </div>
+
+        <div class="footer">
+            © 2024 Formas Europeas Belize | <a href="https://formaseuropeasbelize.com/" style="color: #707070; text-decoration: none;">Privacy Policy</a>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
